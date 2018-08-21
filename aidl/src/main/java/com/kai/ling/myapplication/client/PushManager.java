@@ -15,9 +15,7 @@ import com.kai.ling.myapplication.server.PushService;
 public class PushManager {
 
     private static final String TAG = "GEBILAOLITOU";
-    private int id = 1;
 
-    //定义为单例模式
     private PushManager() {
     }
 
@@ -25,11 +23,13 @@ public class PushManager {
 
     private static PushManager instance = new PushManager();
 
+    //单例
     public static PushManager getInstance() {
         return instance;
     }
 
 
+    //绑定服务
     public void init(Context context) {
         //定义intent
         Intent intent = new Intent(context, PushService.class);
@@ -37,33 +37,12 @@ public class PushManager {
         context.bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
-    public void connect() {
-        try {
-            //通过AIDL远程调用
-            Log.d(TAG, "pushManager ***************start Remote***************");
-            iMyAidlInterface.connect();
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void sendMessage(String content) {
-        MessageData messageData = new MessageData();
-        messageData.content = content;
-        try {
-            iMyAidlInterface.sendMessage(messageData);
-        } catch (RemoteException e) {
-            e.printStackTrace();
-            Log.d(TAG, "pushManager ***************RemoteException***************");
-        }
-    }
-
-
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             //成功连接
             Log.d(TAG, "pushManager ***************成功连接***************");
+            //通过asInterface获取
             iMyAidlInterface = IMyAidlInterface.Stub.asInterface(service);
 
         }
@@ -74,4 +53,27 @@ public class PushManager {
             Log.d(TAG, "pushManager ***************连接已经断开***************");
         }
     };
+
+    //远程调用connect()方法
+    public void connect() {
+        try {
+            Log.d(TAG, "pushManager ***************start Remote***************");
+            iMyAidlInterface.connect();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //远程调用sendMessage()方法
+    public void sendMessage(String content) {
+        MessageData messageData = new MessageData();
+        messageData.content = content;
+        try {
+            MessageData messageData1 = iMyAidlInterface.sendMessage(messageData);
+            Log.d(TAG, "pushManager ***************" + messageData1.content + "***************");
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            Log.d(TAG, "pushManager ***************RemoteException***************");
+        }
+    }
 }

@@ -22,8 +22,10 @@ public class MyServer extends IMyAidlInterface.Stub {
     }
 
     @Override
-    public void sendMessage(MessageData message) throws RemoteException {
+    public MessageData sendMessage(MessageData message) throws RemoteException {
         Log.i(TAG, "MyServer ** sendInMessage **" + message.toString());
+        message.content = "更改了";
+        return message;
     }
 
 }
