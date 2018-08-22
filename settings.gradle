@@ -1,2 +1,3 @@
 include ':app', ':LeetCode'
 include ':AIDL:SingleAppAIDL'
+include ':AIDL:MultipleAppAIDLClient', ':AIDL:MultipleAppAIDLServer'
