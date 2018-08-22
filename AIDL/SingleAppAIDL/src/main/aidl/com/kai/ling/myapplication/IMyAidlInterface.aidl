@@ -13,5 +13,5 @@ interface IMyAidlInterface {
 
     void connect();
 
-    MessageData sendMessage(inout MessageData message);
+    void sendMessage(inout MessageData message);
 }

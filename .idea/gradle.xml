@@ -8,8 +8,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AIDL" />
+            <option value="$PROJECT_DIR$/AIDL/SingleAppAIDL" />
             <option value="$PROJECT_DIR$/LeetCode" />
-            <option value="$PROJECT_DIR$/aidl" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

@@ -69,8 +69,8 @@ public class PushManager {
         MessageData messageData = new MessageData();
         messageData.content = content;
         try {
-            MessageData messageData1 = iMyAidlInterface.sendMessage(messageData);
-            Log.d(TAG, "pushManager ***************" + messageData1.content + "***************");
+            iMyAidlInterface.sendMessage(messageData);
+            Log.d(TAG, "pushManager ***************sendMessage***************");
         } catch (RemoteException e) {
             e.printStackTrace();
             Log.d(TAG, "pushManager ***************RemoteException***************");

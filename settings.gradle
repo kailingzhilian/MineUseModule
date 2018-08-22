@@ -1,1 +1,2 @@
-include ':app', ':aidl', ':LeetCode'
+include ':app', ':LeetCode'
+include ':AIDL:SingleAppAIDL'
