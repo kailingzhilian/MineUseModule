@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IPC/AIDL.iml" filepath="$PROJECT_DIR$/IPC/AIDL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPC/IPC.iml" filepath="$PROJECT_DIR$/IPC/IPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLClient/IPC-MultipleAppAIDLClient.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLClient/IPC-MultipleAppAIDLClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLServer/IPC-MultipleAppAIDLServer.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLServer/IPC-MultipleAppAIDLServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPC/SingleAppAIDL/IPC-SingleAppAIDL.iml" filepath="$PROJECT_DIR$/IPC/SingleAppAIDL/IPC-SingleAppAIDL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPC/IPCCase/IPCCase.iml" filepath="$PROJECT_DIR$/IPC/IPCCase/IPCCase.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLClient/MultipleAppAIDLClient.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLClient/MultipleAppAIDLClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLServer/MultipleAppAIDLServer.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLServer/MultipleAppAIDLServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IPC/SingleAppAIDL/SingleAppAIDL.iml" filepath="$PROJECT_DIR$/IPC/SingleAppAIDL/SingleAppAIDL.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudyCase.iml" filepath="$PROJECT_DIR$/StudyCase.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

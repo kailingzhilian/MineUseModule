@@ -1,3 +1,5 @@
 include ':app', ':LeetCode'
-include ':AIDL:SingleAppAIDL'
-include ':AIDL:MultipleAppAIDLClient', ':AIDL:MultipleAppAIDLServer'
+include ':IPC:IPCCase'
+include ':IPC:MultipleAppAIDLClient'
+include ':IPC:MultipleAppAIDLServer'
+include ':IPC:SingleAppAIDL'
