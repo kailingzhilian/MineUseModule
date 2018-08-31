@@ -14,11 +14,15 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
+        initData();
         initView();
     }
 
     protected abstract int getLayoutResId();
 
     protected abstract void initView();
+
+    protected void initData() {
+    }
 
 }
