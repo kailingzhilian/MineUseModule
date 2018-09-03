@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IPC/IPC.iml" filepath="$PROJECT_DIR$/IPC/IPC.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPC/IPCCase/IPCCase.iml" filepath="$PROJECT_DIR$/IPC/IPCCase/IPCCase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCase/JavaCase.iml" filepath="$PROJECT_DIR$/JavaCase/JavaCase.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLClient/MultipleAppAIDLClient.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLClient/MultipleAppAIDLClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLServer/MultipleAppAIDLServer.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLServer/MultipleAppAIDLServer.iml" />

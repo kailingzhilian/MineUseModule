@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/IPC/MultipleAppAIDLClient" />
             <option value="$PROJECT_DIR$/IPC/MultipleAppAIDLServer" />
             <option value="$PROJECT_DIR$/IPC/SingleAppAIDL" />
+            <option value="$PROJECT_DIR$/JavaCase" />
             <option value="$PROJECT_DIR$/LeetCode" />
             <option value="$PROJECT_DIR$/app" />
           </set>

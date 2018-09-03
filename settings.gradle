@@ -1,4 +1,4 @@
-include ':app', ':LeetCode'
+include ':app', ':LeetCode', ':JavaCase'
 include ':IPC:IPCCase'
 include ':IPC:MultipleAppAIDLClient'
 include ':IPC:MultipleAppAIDLServer'
