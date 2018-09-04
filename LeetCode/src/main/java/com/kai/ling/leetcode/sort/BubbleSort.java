@@ -27,11 +27,9 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static void bubbleSort(int[] datas) {
-        int count = 0;
         int temp;
         for (int i = 0; i < datas.length - 1; i++) {
             for (int j = i + 1; j < datas.length; j++) {
-                count++;
                 if (datas[i] > datas[j]) {
                     temp = datas[i];
                     datas[i] = datas[j];
@@ -39,9 +37,6 @@ public class BubbleSort {
                 }
             }
         }
-        System.out.println("Bubble Sort :");
-        System.out.println(Arrays.toString(datas));
-        System.out.println("count :" + count);
     }
 
 }

@@ -13,8 +13,11 @@ public class TestSort {
     public static void main(String[] args) {
         int[] data = buildArray();
 
-        BubbleSort.bubbleSort(data);
+//        BubbleSort.bubbleSort(data);
+        SelectionSort.selectionSort(data);
 
+        System.out.println("Sort :");
+        System.out.println(Arrays.toString(data));
     }
 
     private static int[] buildArray() {
