@@ -14,7 +14,8 @@ public class TestSort {
         int[] data = buildArray();
 
 //        BubbleSort.bubbleSort(data);
-        SelectionSort.selectionSort(data);
+//        SelectionSort.selectionSort(data);
+        InsertionSort.insertionSort(data);
 
         System.out.println("Sort :");
         System.out.println(Arrays.toString(data));
