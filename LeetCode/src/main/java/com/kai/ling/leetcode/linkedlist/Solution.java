@@ -167,5 +167,37 @@ public class Solution {
 
         return finalNode;
     }
+
+    /**
+     * 删除链表的倒数第 n 个节点
+     */
+    public static ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null) {
+            return null;
+        }
+
+        if (n == 0) {
+            return null;
+        }
+
+        ListNode first = head;
+        ListNode sec = head;
+        for (int i = 0; i < n; i++) {
+            first = first.next;
+        }
+
+        while (first != null && first.next != null) {
+            first = first.next;
+            sec = sec.next;
+        }
+
+        if (sec.next == null) {
+            return null;
+        }
+
+
+        sec.next = sec.next.next;
+        return head;
+    }
 }
 
