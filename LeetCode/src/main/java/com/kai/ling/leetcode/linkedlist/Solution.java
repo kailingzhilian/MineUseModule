@@ -199,5 +199,66 @@ public class Solution {
         sec.next = sec.next.next;
         return head;
     }
+
+    /**
+     * 删除链表中的节点
+     */
+    public static ListNode removeElements(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+
+        //定义前指针 是为了删除节点
+        ListNode pre = null;
+
+        //定义next是为了指针后移
+        ListNode next;
+
+        for (ListNode i = head; i != null; i = next) {
+            next = i.next;
+            if (i.val == val) {
+                //这个判断说明头一个节点，就需要删除，因此头指针后移
+                if (head.equals(i)) {
+                    head = head.next;
+                }
+
+                //前节点next指向后节点
+                if (pre != null) {
+                    pre.next = i.next;
+                }
+
+                i.next = null;
+            } else {
+                pre = i;
+            }
+        }
+
+        return head;
+    }
+
+
+    /**
+     * 奇偶链表
+     * 给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
+     */
+    public static ListNode oddEvenList(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode odd = head;
+        ListNode even = head.next;
+        ListNode evenHead = head.next;
+
+
+        while (odd.next != null && even.next != null) {
+            odd.next = even.next;
+            odd = odd.next;
+
+            even.next = odd.next;
+            even = even.next;
+        }
+        odd.next = evenHead;
+        return head;
+    }
 }
 
