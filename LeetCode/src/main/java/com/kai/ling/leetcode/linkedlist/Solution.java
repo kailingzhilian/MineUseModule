@@ -1,6 +1,7 @@
 package com.kai.ling.leetcode.linkedlist;
 
 import com.kai.ling.leetcode.linkedlist.model.ListNode;
+import com.kai.ling.leetcode.linkedlist.util.LinkedListUtil;
 
 /**
  * Created by kai.wang
@@ -260,5 +261,215 @@ public class Solution {
         odd.next = evenHead;
         return head;
     }
+
+    /**
+     * 断一个链表是否为回文链表
+     * 输入: 1->2->2->1
+     * 输出: true
+     */
+    public static boolean isPalindrome(ListNode head) {
+        if (head == null || head.next == null) {
+            return true;
+        }
+
+        ListNode reverseNode = null;//指向反转的链表
+        ListNode nomalNode;//指向后面后半截链表
+
+        if (head.next.next == null) {
+            reverseNode = head;
+            nomalNode = head.next;
+            reverseNode.next = null;
+        } else {
+            //快慢指针找中间值
+            //顺便反转前半截链表
+            ListNode slow = head;
+            ListNode fast = head;
+
+            ListNode tempSlow;
+            ListNode tempFast;
+
+
+            while (fast.next != null && fast.next.next != null) {
+                tempSlow = slow.next;
+                tempFast = fast.next.next;
+
+                slow.next = reverseNode;
+                reverseNode = slow;
+
+                slow = tempSlow;
+                fast = tempFast;
+            }
+
+
+            tempSlow = slow.next;
+            slow.next = reverseNode;
+            reverseNode = slow;
+
+
+            //考虑链表是奇数长度链表
+            if (fast.next == null) {
+                reverseNode = reverseNode.next;
+            }
+
+            nomalNode = tempSlow;
+        }
+
+        System.out.println("nomalNode");
+        LinkedListUtil.printLinkedList(nomalNode);
+        System.out.println("reverseNode");
+        LinkedListUtil.printLinkedList(reverseNode);
+
+        //遍历后半截找不同
+        while (nomalNode != null && reverseNode != null) {
+            if (nomalNode.val != reverseNode.val) {
+                return false;
+            }
+            nomalNode = nomalNode.next;
+            reverseNode = reverseNode.next;
+        }
+
+        return true;
+    }
+
+
+//    /**
+//     * 合并两个链表--前后插入
+//     */
+//    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+//
+//        if (l1 == null) {
+//            return l2;
+//        }
+//
+//        if (l2 == null) {
+//            return l1;
+//        }
+//
+//        ListNode pointL1 = l1;
+//        ListNode pointL2 = l2;
+//        ListNode tempL1 = l1;
+//        ListNode tempL2 = l2;
+//
+//
+//        while (tempL1 != null && tempL2 != null) {
+//            //记录下一个变量
+//            tempL1 = tempL1.next;
+//            tempL2 = tempL2.next;
+//
+//            //指针链接
+//            pointL1.next = pointL2;
+//            if (tempL1 != null) {
+//                pointL2.next = tempL1;
+//            }
+//
+//            //指针前移
+//            pointL1 = tempL1;
+//            pointL2 = tempL2;
+//        }
+//
+//        return l1;
+//    }
+
+//    /**
+//     * 合并两个有序链表
+//     */
+//    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+//
+//        if (l1 == null) {
+//            return l2;
+//        }
+//
+//        if (l2 == null) {
+//            return l1;
+//        }
+//
+//
+//        ListNode head = l1;
+//        ListNode temp1 = l1;
+//        ListNode temp2 = l2;
+//        if (l2.val < l1.val) {
+//            head = l2;
+//            temp1 = l2;
+//            temp2 = l1;
+//        }
+//        ListNode pre = temp1;
+//        ListNode cur;
+//        boolean isContinue;
+//
+//
+//        while (temp1.next != null) {
+//            isContinue = true;
+//            pre = temp1;
+//            temp1 = temp1.next;
+//            while (temp2 != null && isContinue) {
+//                cur = temp2;
+//                if (cur.val <= temp1.val) {
+//                    temp2 = temp2.next;
+//
+//                    pre.next = cur;
+//                    cur.next = temp1;
+//                    pre = cur;
+//                } else {
+//                    isContinue = false;
+//                }
+//            }
+//            pre = temp1;
+//        }
+//        pre.next = temp2;
+//        return head;
+//    }
+
+    /**
+     * 合并两个有序链表
+     */
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+        if (l1 == null) {
+            return l2;
+        }
+
+        if (l2 == null) {
+            return l1;
+        }
+
+
+        ListNode temp1 = l1;
+        ListNode temp2 = l2;
+        ListNode mergeListNode;
+        if (l1.val > l2.val) {
+            mergeListNode = l2;
+            temp2 = l2.next;
+        } else {
+            mergeListNode = l1;
+            temp1 = l1.next;
+        }
+        ListNode mergeListNodePointer = mergeListNode;
+
+
+        //每次循环只前进一个指针
+        while (temp1 != null && temp2 != null) {
+            if (temp1.val > temp2.val) {
+                mergeListNodePointer.next = temp2;
+                mergeListNodePointer=mergeListNodePointer.next;
+                temp2 = temp2.next;
+            } else {
+                mergeListNodePointer.next = temp1;
+                mergeListNodePointer=mergeListNodePointer.next;
+                temp1 = temp1.next;
+            }
+        }
+
+        //将剩余的节点拼接起来
+        if (temp1 != null) {
+            mergeListNodePointer.next = temp1;
+        }
+
+        if (temp2 != null) {
+            mergeListNodePointer.next = temp2;
+        }
+
+        return mergeListNode;
+    }
+
 }
 

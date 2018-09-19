@@ -32,10 +32,21 @@ public class TestLeetCodeLiskedList {
 //        LinkedListUtil.printLinkedList(intersectionNode);
 
 
-        int[] b ={1};
+//        int[] b ={1};
+//        ListNode nodeB = LinkedListUtil.buildLinkedList(b);
+//        LinkedListUtil.printLinkedList(nodeB);
+//        ListNode listNode = Solution.removeNthFromEnd(nodeB, 1);
+//        LinkedListUtil.printLinkedList(listNode);
+
+        int[] b = {5};
         ListNode nodeB = LinkedListUtil.buildLinkedList(b);
         LinkedListUtil.printLinkedList(nodeB);
-        ListNode listNode = Solution.removeNthFromEnd(nodeB, 1);
+
+        int[] a = {1,2,4};
+        ListNode nodeA = LinkedListUtil.buildLinkedList(a);
+        LinkedListUtil.printLinkedList(nodeA);
+
+        ListNode listNode = Solution.mergeTwoLists(nodeA, nodeB);
         LinkedListUtil.printLinkedList(listNode);
     }
 }
