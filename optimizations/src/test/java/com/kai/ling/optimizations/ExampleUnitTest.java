@@ -1,4 +1,4 @@
-package com.kai.ling.myapplication;
+package com.kai.ling.optimizations;
 
 import org.junit.Test;
 

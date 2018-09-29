@@ -1,11 +1,9 @@
-package com.kai.ling.myapplication.server;
+package com.kai.ling.optimizations.server;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
-
-import com.kai.ling.myapplication.server.MyServer;
 
 public class PushService extends Service {
 

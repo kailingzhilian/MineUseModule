@@ -1,4 +1,4 @@
-package com.kai.ling.myapplication.client;
+package com.kai.ling.optimizations.client;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -8,9 +8,9 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.kai.ling.myapplication.IMyAidlInterface;
-import com.kai.ling.myapplication.MessageData;
-import com.kai.ling.myapplication.server.PushService;
+import com.kai.ling.optimizations.IMyAidlInterface;
+import com.kai.ling.optimizations.MessageData;
+import com.kai.ling.optimizations.server.PushService;
 
 public class PushManager {
 

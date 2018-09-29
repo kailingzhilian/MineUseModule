@@ -1,10 +1,10 @@
-package com.kai.ling.myapplication.server;
+package com.kai.ling.optimizations.server;
 
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.kai.ling.myapplication.IMyAidlInterface;
-import com.kai.ling.myapplication.MessageData;
+import com.kai.ling.optimizations.IMyAidlInterface;
+import com.kai.ling.optimizations.MessageData;
 
 public class MyServer extends IMyAidlInterface.Stub {
 

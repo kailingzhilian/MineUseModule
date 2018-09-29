@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/JavaCase" />
             <option value="$PROJECT_DIR$/LeetCode" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/optimizations" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

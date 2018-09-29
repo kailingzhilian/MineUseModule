@@ -1,4 +1,4 @@
-package com.kai.ling.myapplication.client;
+package com.kai.ling.optimizations.client;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.kai.ling.myapplication.R;
+import com.kai.ling.optimizations.R;
 
 public class MainActivity extends AppCompatActivity {
 
