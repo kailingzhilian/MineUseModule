@@ -1,7 +1,7 @@
 // IMyAidlInterface.aidl
-package com.kai.ling.myapplication;
+package com.kai.ling.optimizations;
 // Declare any non-default types here with import statements
-import com.kai.ling.myapplication.MessageData;
+import com.kai.ling.optimizations.MessageData;
 
 interface IMyAidlInterface {
     /**

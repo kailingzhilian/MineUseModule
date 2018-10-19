@@ -9,9 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLClient/MultipleAppAIDLClient.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLClient/MultipleAppAIDLClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPC/MultipleAppAIDLServer/MultipleAppAIDLServer.iml" filepath="$PROJECT_DIR$/IPC/MultipleAppAIDLServer/MultipleAppAIDLServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPC/SingleAppAIDL/SingleAppAIDL.iml" filepath="$PROJECT_DIR$/IPC/SingleAppAIDL/SingleAppAIDL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SourceCode/SourceCode.iml" filepath="$PROJECT_DIR$/SourceCode/SourceCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudyCase.iml" filepath="$PROJECT_DIR$/StudyCase.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/optimizations/optimization.iml" filepath="$PROJECT_DIR$/optimizations/optimization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/optimizations/optimizations.iml" filepath="$PROJECT_DIR$/optimizations/optimizations.iml" />
     </modules>
   </component>
 </project>
